@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "606046267293",
+    "project_id": "thekedaar-53a8f",
+    "storage_bucket": "thekedaar-53a8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606046267293:android:54204a0059b344d48ef174",
+        "android_client_info": {
+          "package_name": "com.thekedaar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606046267293-t7q57fdb2ldt90d9euc3pjsnsgtisgjq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAgwD86yg7ELxaSLfzB-D3Zw4gA9cTF_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606046267293-t7q57fdb2ldt90d9euc3pjsnsgtisgjq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
