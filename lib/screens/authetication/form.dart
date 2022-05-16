@@ -10,9 +10,9 @@ class FormScreen extends StatefulWidget {
 }
 
 class _FormScreenState extends State<FormScreen> {
-  var _formKey = GlobalKey<FormState>();
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   bool hideText = true;
   void changeHiddenState() {
     setState(() {
@@ -83,7 +83,7 @@ class _FormScreenState extends State<FormScreen> {
                       ? IconButton(
                           padding: EdgeInsets.only(bottom: 10),
                           onPressed: changeHiddenState,
-                          icon: Icon(Icons.security),
+                          icon: Icon(Icons.remove_red_eye),
                         )
                       : IconButton(
                           padding: EdgeInsets.only(bottom: 10),
@@ -105,8 +105,8 @@ class _FormScreenState extends State<FormScreen> {
             ),
           ),
           LoginButton(
-            username: _usernameController.text,
-            password: _passwordController.text,
+            username: _usernameController,
+            password: _passwordController,
           ),
         ],
       ),

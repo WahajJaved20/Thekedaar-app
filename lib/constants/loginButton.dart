@@ -5,10 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../firebasehelper/auth.dart';
 
-class LoginButton extends StatelessWidget {
-  final username;
-  final password;
+class LoginButton extends StatefulWidget {
+  var username;
+  var password;
   LoginButton({this.username, this.password});
+
+  @override
+  State<LoginButton> createState() => _LoginButtonState();
+}
+
+class _LoginButtonState extends State<LoginButton> {
   @override
   Widget build(BuildContext context) {
     final AuthService _auth = AuthService();
@@ -23,8 +29,8 @@ class LoginButton extends StatelessWidget {
             horizontal: MediaQuery.of(context).size.width * 0.05),
         child: ElevatedButton(
           onPressed: () async {
-            dynamic result =
-                await _auth.signInWithEmailAndPassword(username, password);
+            dynamic result = await _auth.signInWithEmailAndPassword(
+                widget.username.text.trim(), widget.password.text.trim());
           },
           style: ButtonStyle(
             backgroundColor:
