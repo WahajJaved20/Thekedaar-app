@@ -9,7 +9,15 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+      options: FirebaseOptions(
+          apiKey: "AIzaSyC6MuvsMy5dQqmJ0F_fAPRs99ag6pChRAg",
+          authDomain: "thekedaar-53a8f.firebaseapp.com",
+          projectId: "thekedaar-53a8f",
+          storageBucket: "thekedaar-53a8f.appspot.com",
+          messagingSenderId: "606046267293",
+          appId: "1:606046267293:web:beaaeaabbcdb63f88ef174",
+          measurementId: "G-CQ5S6X3G0Y"));
   // await MongoDatabase.connect();
   runApp(MyApp());
 }

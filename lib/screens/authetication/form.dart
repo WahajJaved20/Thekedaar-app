@@ -13,7 +13,7 @@ class _FormScreenState extends State<FormScreen> {
   var _formKey = GlobalKey<FormState>();
   TextEditingController _usernameController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
-  bool hideText = false;
+  bool hideText = true;
   void changeHiddenState() {
     setState(() {
       hideText = !hideText;
@@ -81,10 +81,12 @@ class _FormScreenState extends State<FormScreen> {
                   ),
                   suffixIcon: hideText
                       ? IconButton(
+                          padding: EdgeInsets.only(bottom: 10),
                           onPressed: changeHiddenState,
                           icon: Icon(Icons.security),
                         )
                       : IconButton(
+                          padding: EdgeInsets.only(bottom: 10),
                           onPressed: changeHiddenState,
                           icon: Icon(Icons.remove_red_eye_outlined),
                         ),
