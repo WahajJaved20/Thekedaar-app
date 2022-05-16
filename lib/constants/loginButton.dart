@@ -23,13 +23,8 @@ class LoginButton extends StatelessWidget {
             horizontal: MediaQuery.of(context).size.width * 0.05),
         child: ElevatedButton(
           onPressed: () async {
-            print(username);
-            print(password);
             dynamic result =
                 await _auth.signInWithEmailAndPassword(username, password);
-            if (result != null) {
-              print("LESS GOO");
-            }
           },
           style: ButtonStyle(
             backgroundColor:
