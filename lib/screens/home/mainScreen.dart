@@ -43,6 +43,8 @@ class _HomePageState extends State<HomePage> {
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
       ),
     );
   }
