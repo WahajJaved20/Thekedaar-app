@@ -1,6 +1,14 @@
 import 'package:construction_app/models/entities.dart';
 
 class ProjectModel {
+  ProjectModel(
+      {this.name,
+      this.history,
+      this.isHistory,
+      this.dateStart,
+      this.dateEnd,
+      this.status,
+      this.entityList});
   String name; // Project name
   List<ProjectModel> history; // keep track of changes
   bool isHistory; // check to see if project is on main screen or post edit
