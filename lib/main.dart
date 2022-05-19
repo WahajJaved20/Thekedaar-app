@@ -1,11 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:construction_app/dbHelper/mongoDB.dart';
-import 'package:construction_app/screens/authetication/login.dart';
 import 'package:construction_app/screens/handler/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +20,6 @@ void main() async {
           messagingSenderId: "606046267293",
           appId: "1:606046267293:web:beaaeaabbcdb63f88ef174",
           measurementId: "G-CQ5S6X3G0Y"));
-  // await MongoDatabase.connect();
   runApp(MyApp());
 }
 
