@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:construction_app/screens/home/Project.dart';
 import 'package:construction_app/screens/home/Settings.dart';
+import 'package:construction_app/screens/home/newproject.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

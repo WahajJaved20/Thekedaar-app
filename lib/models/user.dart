@@ -5,9 +5,3 @@ class Users {
   final String uid;
   Users({this.uid});
 }
-
-// class UserData {
-//   String uid;
-//   List<ProjectModel> projects;
-//   UserData({this.uid, this.projects});
-// }
