@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:construction_app/screens/handler/wrapper.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +7,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 
 import 'firebasehelper/auth.dart';
+import 'firebasehelper/databaseHelper/entityHelper.dart';
 import 'models/user.dart';
 
 void main() async {
@@ -20,7 +21,11 @@ void main() async {
           messagingSenderId: "606046267293",
           appId: "1:606046267293:web:beaaeaabbcdb63f88ef174",
           measurementId: "G-CQ5S6X3G0Y"));
-  runApp(MyApp());
+  runApp(FutureProvider<List<String>>(
+    create: (_) => EntityDatabaseService().readEntities(),
+    initialData: ["Nothing here"],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -31,9 +36,11 @@ class MyApp extends StatelessWidget {
     return StreamProvider<Users>.value(
         child: MaterialApp(
           theme: ThemeData(
+            primaryColor: Color.fromARGB(255, 132, 100, 87),
             textTheme: GoogleFonts.poppinsTextTheme(
               Theme.of(context).textTheme,
             ),
+            backgroundColor: Color.fromARGB(255, 175, 144, 132),
           ),
           debugShowCheckedModeBanner: false,
           home: Wrapper(),

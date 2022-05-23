@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:construction_app/screens/home/Entity/list_entity.dart';
 import 'package:construction_app/screens/home/Project/Project.dart';
-import 'package:construction_app/screens/home/Settings.dart';
+import 'package:construction_app/screens/home/Settings/Settings.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage> {
 
   List<Widget> navigationOptions = <Widget>[
     Projects(),
-    Text('Entities'),
+    EntityList(),
     Settings()
   ];
   @override
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: navigationOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color.fromARGB(255, 132, 100, 87),
+        selectedItemColor: Theme.of(context).primaryColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.work),

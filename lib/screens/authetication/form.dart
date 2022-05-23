@@ -42,17 +42,16 @@ class _FormScreenState extends State<FormScreen> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.person,
-                    color: Color.fromARGB(255, 132, 100, 87),
+                    color: Theme.of(context).primaryColor,
                   ),
                   hintText: "Username",
                   hintStyle: GoogleFonts.varelaRound(
                     textStyle: TextStyle(
-                        fontSize: 20,
-                        color: Color.fromARGB(255, 175, 144, 132)),
+                        fontSize: 20, color: Theme.of(context).backgroundColor),
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 132, 100, 87),
+                      color: Theme.of(context).primaryColor,
                       width: 4,
                     ),
                   ),
@@ -77,7 +76,7 @@ class _FormScreenState extends State<FormScreen> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.lock,
-                    color: Color.fromARGB(255, 132, 100, 87),
+                    color: Theme.of(context).primaryColor,
                   ),
                   suffixIcon: hideText
                       ? IconButton(
@@ -96,7 +95,7 @@ class _FormScreenState extends State<FormScreen> {
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 132, 100, 87),
+                      color: Theme.of(context).primaryColor,
                       width: 4,
                     ),
                   ),

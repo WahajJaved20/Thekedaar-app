@@ -34,7 +34,7 @@ class _LoginButtonState extends State<LoginButton> {
           },
           style: ButtonStyle(
             backgroundColor:
-                MaterialStateProperty.all(Color.fromARGB(255, 132, 100, 87)),
+                MaterialStateProperty.all(Theme.of(context).primaryColor),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),

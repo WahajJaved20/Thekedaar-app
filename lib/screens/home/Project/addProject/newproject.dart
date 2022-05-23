@@ -1,10 +1,5 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
 
-import 'package:construction_app/firebasehelper/databaseHelper/entityHelper.dart';
-import 'package:construction_app/firebasehelper/databaseHelper/entityList.dart';
-import 'package:construction_app/firebasehelper/databaseHelper/projectsHelper.dart';
-import 'package:construction_app/models/EntityModel.dart';
-import 'package:construction_app/models/projectmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -66,17 +61,17 @@ class _NewProjectState extends State<NewProject> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.work,
-                              color: Color.fromARGB(255, 132, 100, 87),
+                              color: Theme.of(context).primaryColor,
                             ),
                             hintText: "Name",
                             hintStyle: GoogleFonts.varelaRound(
                               textStyle: TextStyle(
                                   fontSize: 20,
-                                  color: Color.fromARGB(255, 175, 144, 132)),
+                                  color: Theme.of(context).backgroundColor),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color.fromARGB(255, 132, 100, 87),
+                                color: Theme.of(context).primaryColor,
                                 width: 4,
                               ),
                             ),
@@ -101,7 +96,7 @@ class _NewProjectState extends State<NewProject> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.calendar_month,
-                              color: Color.fromARGB(255, 132, 100, 87),
+                              color: Theme.of(context).primaryColor,
                             ),
                             hintText: "Start Date",
                             hintStyle: GoogleFonts.varelaRound(
@@ -109,7 +104,7 @@ class _NewProjectState extends State<NewProject> {
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color.fromARGB(255, 132, 100, 87),
+                                color: Theme.of(context).primaryColor,
                                 width: 4,
                               ),
                             ),
@@ -134,7 +129,7 @@ class _NewProjectState extends State<NewProject> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.calendar_month,
-                              color: Color.fromARGB(255, 132, 100, 87),
+                              color: Theme.of(context).primaryColor,
                             ),
                             hintText: "End Date",
                             hintStyle: GoogleFonts.varelaRound(
@@ -142,7 +137,7 @@ class _NewProjectState extends State<NewProject> {
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color.fromARGB(255, 132, 100, 87),
+                                color: Theme.of(context).primaryColor,
                                 width: 4,
                               ),
                             ),
@@ -204,7 +199,7 @@ class _NewProjectState extends State<NewProject> {
                               },
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
-                                    Color.fromARGB(255, 132, 100, 87)),
+                                    Theme.of(context).primaryColor),
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(

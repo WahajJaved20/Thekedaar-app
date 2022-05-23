@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
         child: Center(
           child: Material(
             elevation: 20,
-            shadowColor: Color.fromARGB(255, 132, 100, 87),
+            shadowColor: Theme.of(context).primaryColor,
             child: Container(
               color: Color.fromARGB(255, 229, 221, 219),
               width: MediaQuery.of(context).size.width * 0.7,

@@ -3,6 +3,7 @@
 import 'package:construction_app/firebasehelper/databaseHelper/projectsHelper.dart';
 import 'package:construction_app/models/projectmodel.dart';
 import 'package:construction_app/screens/home/Project/addProject/newproject.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +22,7 @@ class _ProjectsState extends State<Projects> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        backgroundColor: Color.fromARGB(255, 132, 100, 87),
+        backgroundColor: Theme.of(context).primaryColor,
         onPressed: () async {
           List<String> entities = [];
           var a = await EntityDatabaseService().readEntities();
@@ -152,7 +153,10 @@ class _ProjectsState extends State<Projects> {
                         Icons.delete,
                         color: Colors.black,
                       ),
-                      onPressed: () => print('bruh'),
+                      onPressed: () => ProjectDatabaseService(
+                              uid: Provider.of<Users>(context, listen: false)
+                                  .uid)
+                          .deleteProject(mod),
                       label: Text('Delete',
                           style: GoogleFonts.varelaRound(
                               textStyle: TextStyle(fontSize: 15),

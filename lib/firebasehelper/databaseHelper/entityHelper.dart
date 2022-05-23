@@ -11,6 +11,7 @@ class EntityDatabaseService {
           .doc('YMeIZstEAwa5DMh5phG3');
       var snapshot = await documents.get();
       Map<String, dynamic> data = snapshot.data();
+
       return data['entityList'].cast<String>();
     } catch (e) {
       print(e);
