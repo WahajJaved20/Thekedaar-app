@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
 
+import 'package:construction_app/screens/home/Project/addProject/add_entitiy_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +20,7 @@ class _NewProjectState extends State<NewProject> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _startDateController = TextEditingController();
   final TextEditingController _endDateController = TextEditingController();
-  List<String> selectedEntities = [];
+  List<String> selectedEntities = ['Cement'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -195,7 +196,17 @@ class _NewProjectState extends State<NewProject> {
                             child: ElevatedButton(
                               onPressed: () {
                                 // create one
-                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => NewProjectScreen2(
+                                            entities: selectedEntities,
+                                            name: _nameController.text,
+                                            startDate:
+                                                _startDateController.text,
+                                            endDate: _endDateController.text,
+                                          )),
+                                );
                               },
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(

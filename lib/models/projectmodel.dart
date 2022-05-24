@@ -18,7 +18,8 @@ class ProjectModel {
   String dateStart = ""; // date on which it was opened
   String dateEnd = ""; // date on which it was closed
   bool status = true; // project status 0-closed 1-open
-  List<Entity> entityList = []; // a list of entities currently interacting
+  List<Map<String, dynamic>>
+      entityList; // a list of entities currently interacting
   Map<String, dynamic> toJson() => {
         'id': id,
         'name': name,
